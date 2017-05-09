@@ -144,6 +144,10 @@ var compile = function(sources, options, callback) {
         unlinked_binary: "0x" + contract.evm.bytecode.object // deprecated
       }
 
+      if (options.rawData) {
+        contract_definition.rawData = contract;
+      }
+
       // Go through the link references and replace them with older-style
       // identifiers. We'll do this until we're ready to making a breaking
       // change to this code.
