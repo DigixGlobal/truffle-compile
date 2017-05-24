@@ -66,7 +66,7 @@ var compile = function(sources, options, callback) {
     sources: {},
     settings: {
       optimizer: {
-        enabled: true,
+        enabled: false,
         runs: 0 // See https://github.com/ethereum/solidity/issues/2245
       },
       outputSelection: {
