@@ -62,7 +62,7 @@ var compile = function(sources, options, callback) {
     operatingSystemIndependentSources[replacement] = sources[source];
   });
 
-  var solcStandardInput = {
+  var solcStandardInput = options.solcStandardInput || {
     language: "Solidity",
     sources: {},
     settings: {
